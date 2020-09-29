@@ -87,7 +87,7 @@ Não teremos declaracões de procedimentos nem funções, apenas de variáveis. 
 
 As variáveis podem ser do tipo int, float ou char, e as declarações devem ter o seguinte formato:
 
-<decl_var> ::= <tipo> <id> {,<id>}* ";"
+<decl_var> ::= <tipo> <id> {,<id>}* ";"\
 <tipo> ::= int | float | char
 
 **3. Expressões**
@@ -98,7 +98,7 @@ As produções para expressões obedecem à seguinte ordem de precedência:
  2. +, -\
  3. ==, !=, <, >, <=, >=
 
-O aluno deve modificar as produções de modo a eliminar a recursão à esquerda\
+O aluno deve modificar as produções de modo a eliminar a recursão à esquerda
 
 OBS: Expressões apenas com os operadores *, /, +, - são expressões aritméticas. Expressões com os operadores de comparação (==, !>, <, ...) são expressões relacionais. Não podemos ter mais de um operador relacional em um expressão. Podemos ter expressões aritméticas de qualquer lado de um operador relacional. Mas, não podemos ter expressões relacionais em comandos de atribuição.
 
