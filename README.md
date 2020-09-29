@@ -10,16 +10,16 @@ Observação 3: A mensagem deve ser clara e específica de erro, sempre que for 
 
 **Símbolos**
 
-letra ::= [a-z]
-dígito ::= [0-9]
-id ::= (letra | "_") (letra | "_" | dígito)*
-oprelacional ::= <  |  >  |  <=  |  >=  |  ==  |  !=
-oparitmético ::= "+"  |  "-"  |  "*"  |  "/"  |  "="
-especial ::= ")"  |  "("  |  "{"  |  "}"  |  ","  |  ";"
-palreservada ::= main  |  if  |  else  |  while  |  do  |  for  |  int  |  float  |  char
-inteiro ::= dígito+
-float ::= dígito*.dígito+
-char ::= 'letra'  |  'dígito'         // Uma constante do tipo char (entre aspas simples)
+<br>letra ::= [a-z]</br>
+<br>dígito ::= [0-9]</br>
+<br>id ::= (letra | "_") (letra | "_" | dígito)*</br>
+<br>oprelacional ::= <  |  >  |  <=  |  >=  |  ==  |  !=</br>
+<br>oparitmético ::= "+"  |  "-"  |  "*"  |  "/"  |  "="</br>
+<br>especial ::= ")"  |  "("  |  "{"  |  "}"  |  ","  |  ";"</br>
+<br>palreservada ::= main  |  if  |  else  |  while  |  do  |  for  |  int  |  float  |  char</br>
+<br>inteiro ::= dígito+</br>
+<br>float ::= dígito*.dígito+</br>
+<br>char ::= 'letra'  |  'dígito'         // Uma constante do tipo char (entre aspas simples)</br>
 
 Aspectos Gerais da Linguagem
 
