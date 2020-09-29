@@ -96,7 +96,7 @@ As produções para expressões obedecem à seguinte ordem de precedência:
 
  1. *, /\
  2. +, -\
- 3. ==, !=, <, >, <=, >=\
+ 3. ==, !=, <, >, <=, >=
 
 O aluno deve modificar as produções de modo a eliminar a recursão à esquerda\
 
@@ -118,13 +118,13 @@ O significado de if, if-else, while e do-while é como na linguagem C padrão.
 <expr_relacional> ::=   <expr_arit> <op_relacional> <expr_arit>\
 <expr_arit>      ::=   <expr_arit> "+" <termo>   | <expr_arit> "-" <termo> | <termo>\
 <termo>          ::=   <termo> "*" <fator> | <termo> “/” <fator> | <fator>\
-<fator>          ::=   “(“ <expr_arit> “)” | <id> | <float> | <inteiro> | <char>\
+<fator>          ::=   “(“ <expr_arit> “)” | <id> | <float> | <inteiro> | <char>
 
 Nota: os símbolos abre e fecha chaves, quando entre aspas, são terminais\
 
 **6. Tabela de Símbolos**
 
-Para as variáveis, sugere-se que a tabela de símbolos seja uma lista encadeada onde os nós serão registros com os atributos das variáveis: lexema e tipo. O aluno pode modificar a tabela se encontrar utilidade para outro tipo de atributo ou se achar necessário incluir constantes com seus tipos e valores.\
+Para as variáveis, sugere-se que a tabela de símbolos seja uma lista encadeada onde os nós serão registros com os atributos das variáveis: lexema e tipo. O aluno pode modificar a tabela se encontrar utilidade para outro tipo de atributo ou se achar necessário incluir constantes com seus tipos e valores.
 
 Como em toda lista encadeada, precisamos de um nó que aponta para a "cabeça" da lista. Chamemos este nó de "tabela". Na ativação de um bloco, guarde o conteúdo de "tabela" e adicione as novas variáveis no inicio da tabela de símbolos. Na desativação, restaure o valor de "tabela", eliminando assim todas as variáveis declaradas nesse bloco. Lembre de desalocar todos os nós com as variáveis do bloco sendo desativado. A busca a partir de "tabela" sempre encontrará o identificador mais recentemente declarado, por isso as variáveis devem ser incluídas no início da tabela de símbolos.
 
@@ -132,9 +132,9 @@ Como em toda lista encadeada, precisamos de um nó que aponta para a "cabeça" d
 
 **1. Introdução**
 
-Complemente seu parser com um analisador semântico. Como a linguagem é simples, haverá basicamente checagem de tipos.\
+Complemente seu parser com um analisador semântico. Como a linguagem é simples, haverá basicamente checagem de tipos.
 
-Sugere-se que o sintático não seja um código à parte, mas que esteja embutido no parser.\
+Sugere-se que o sintático não seja um código à parte, mas que esteja embutido no parser.
 
 Observação 1: o arquivo a ser compilado será passado ao seu compilador via argumento da linha de comando\
 Observação 2: Imprimir apenas mensagens de erro.\
