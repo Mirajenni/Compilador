@@ -1,7 +1,7 @@
 ## Compilador
 Compilador para pseudo linguagem C. Feita para a cadeira de Compiladores de Ciência da Computação na UNICAP.
 
-Scanner:
+## **Scanner:**
 Escrever, em C/C++ ou Java, a função SCAN para a linguagem abaixo:
 
 Observação 1: o arquivo a ser compilado será passado ao seu compilador via argumento da linha de comando
@@ -73,7 +73,7 @@ Erros do Scanner neste projeto:
 
 OBS: não são regras gerais para todos os compiladores!
 
-**Parser**
+##**Parser**
 
 
 Implemente um parser descendente preditivo recursivo (com procedimentos recursivos), para a linguagem fonte descrita abaixo.
