@@ -162,5 +162,19 @@ Variáveis devem ter sido declaradas antes de ser usadas, e só podem ser usadas
 
 A tabela de símbolos deve ser utilizada para pesquisa da existência da variável e seu tipo, e deve dar suporte ao mecanismo de escopo explicado no projeto do parser.
 
+## **Gerador de Código Intermediário**
 
+1. Introdução
+
+Seu compilador deve gerar código de 3 endereços correspondente ao programa fonte.
+Observação 1: o arquivo a ser compilado será passado ao seu compilador via argumento da linha de comando
+Observação 2: Imprimir apenas mensagens de erro.
+Observação 3: A mensagem deve ser clara e específica de erro, sempre que for o caso, e em qualquer fase do compilador. Formato: "ERRO na linha n, coluna m, ultimo token lido t: mensagem específica do erro"
+
+2. Regras
+
+O código de 3 endereços deve ser semelhante ao visto nos slides. Apenas 1 instrução por linha. Apenas uma operação por instrução (conversão de tipo é uma operação).
+O seu compilador deve escrever o código gerado na saída padrão.
+Deve-se fazer uso de variáveis temporárias e labels gerados automaticamente para os goto's. Todos os comandos iterativos no programa fonte, deverão ser traduzidos para um bloco de comandos com goto's e if's. Utilize uma convenção para a semântica do if, de modo a não ficar ambígua quanto ao teste de condições.
+Deve-se fazer conversão de tipos quando houver presença de entidades de tipos diferentes, porém compatíveis, no mesmo comando do programa fonte. Nenhuma instrução do código de 3 endereços pode fazer operações com tipos diferentes.
 
