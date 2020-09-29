@@ -109,58 +109,58 @@ O significado de if, if-else, while e do-while é como na linguagem C padrão.
 
 **5. Sintaxe**
 
-<programa>       ::=   int main"("")" <bloco>
-<bloco>          ::=   “{“ {<decl_var>}* {<comando>}* “}”
-<comando>        ::=   <comando_básico> | <iteração> | if "("<expr_relacional>")" <comando> {else <comando>}?
-<comando_básico> ::=   <atribuição> | <bloco>
-<iteração>       ::=   while "("<expr_relacional>")" <comando> | do <comando> while "("<expr_relacional>")"";"
-<atribuição>     ::=   <id> "=" <expr_arit> ";"
-<expr_relacional> ::=   <expr_arit> <op_relacional> <expr_arit>
-<expr_arit>      ::=   <expr_arit> "+" <termo>   | <expr_arit> "-" <termo> | <termo>
-<termo>          ::=   <termo> "*" <fator> | <termo> “/” <fator> | <fator>
-<fator>          ::=   “(“ <expr_arit> “)” | <id> | <float> | <inteiro> | <char>
+<programa>       ::=   int main"("")" <bloco>\
+<bloco>          ::=   “{“ {<decl_var>}* {<comando>}* “}”\
+<comando>        ::=   <comando_básico> | <iteração> | if "("<expr_relacional>")" <comando> {else <comando>}?\
+<comando_básico> ::=   <atribuição> | <bloco>\
+<iteração>       ::=   while "("<expr_relacional>")" <comando> | do <comando> while "("<expr_relacional>")"";"\
+<atribuição>     ::=   <id> "=" <expr_arit> ";"\
+<expr_relacional> ::=   <expr_arit> <op_relacional> <expr_arit>\
+<expr_arit>      ::=   <expr_arit> "+" <termo>   | <expr_arit> "-" <termo> | <termo>\
+<termo>          ::=   <termo> "*" <fator> | <termo> “/” <fator> | <fator>\
+<fator>          ::=   “(“ <expr_arit> “)” | <id> | <float> | <inteiro> | <char>\
 
-Nota: os símbolos abre e fecha chaves, quando entre aspas, são terminais
+Nota: os símbolos abre e fecha chaves, quando entre aspas, são terminais\
 
 **6. Tabela de Símbolos**
 
-Para as variáveis, sugere-se que a tabela de símbolos seja uma lista encadeada onde os nós serão registros com os atributos das variáveis: lexema e tipo. O aluno pode modificar a tabela se encontrar utilidade para outro tipo de atributo ou se achar necessário incluir constantes com seus tipos e valores.
+Para as variáveis, sugere-se que a tabela de símbolos seja uma lista encadeada onde os nós serão registros com os atributos das variáveis: lexema e tipo. O aluno pode modificar a tabela se encontrar utilidade para outro tipo de atributo ou se achar necessário incluir constantes com seus tipos e valores.\
 
-Como em toda lista encadeada, precisamos de um nó que aponta para a "cabeça" da lista. Chamemos este nó de "tabela". Na ativação de um bloco, guarde o conteúdo de "tabela" e adicione as novas variáveis no inicio da tabela de símbolos. Na desativação, restaure o valor de "tabela", eliminando assim todas as variáveis declaradas nesse bloco. Lembre de desalocar todos os nós com as variáveis do bloco sendo desativado. A busca a partir de "tabela" sempre encontrará o identificador mais recentemente declarado, por isso as variáveis devem ser incluídas no início da tabela de símbolos.
+Como em toda lista encadeada, precisamos de um nó que aponta para a "cabeça" da lista. Chamemos este nó de "tabela". Na ativação de um bloco, guarde o conteúdo de "tabela" e adicione as novas variáveis no inicio da tabela de símbolos. Na desativação, restaure o valor de "tabela", eliminando assim todas as variáveis declaradas nesse bloco. Lembre de desalocar todos os nós com as variáveis do bloco sendo desativado. A busca a partir de "tabela" sempre encontrará o identificador mais recentemente declarado, por isso as variáveis devem ser incluídas no início da tabela de símbolos.\
 
 ## **Semântico**
 
 **1. Introdução**
 
-Complemente seu parser com um analisador semântico. Como a linguagem é simples, haverá basicamente checagem de tipos.
+Complemente seu parser com um analisador semântico. Como a linguagem é simples, haverá basicamente checagem de tipos.\
 
-Sugere-se que o sintático não seja um código à parte, mas que esteja embutido no parser.
+Sugere-se que o sintático não seja um código à parte, mas que esteja embutido no parser.\
 
-Observação 1: o arquivo a ser compilado será passado ao seu compilador via argumento da linha de comando
-Observação 2: Imprimir apenas mensagens de erro.
-Observação 3: A mensagem deve ser clara e específica de erro, sempre que for o caso, e em qualquer fase do compilador. Formato: "ERRO na linha n, coluna m, ultimo token lido t: mensagem específica do erro"
+Observação 1: o arquivo a ser compilado será passado ao seu compilador via argumento da linha de comando\
+Observação 2: Imprimir apenas mensagens de erro.\
+Observação 3: A mensagem deve ser clara e específica de erro, sempre que for o caso, e em qualquer fase do compilador. Formato: "ERRO na linha n, coluna m, ultimo token lido t: mensagem específica do erro"\
 
 **2. Regras**
 
-Qualquer comando que relacionar duas ou mais entidades (como variáveis e constantes) deverá verificar a compatibilidade de seus tipos.
-O tipo char (constantes char) é compatível apenas com ele mesmo. Seu compilador deve aceitar expressões aritméticas e relacionais com variáveis e literais do tipo char. Ou seja, qualquer operação entre operandos char, resulta no tipo char.
-Os tipos numéricos float e int são compatíveis, porém não se pode atribuir um float a um int. Além disso, dividindo-se dois inteiros (variáveis ou constantes) o tipo resultante é float
-Variáveis devem ter sido declaradas antes de ser usadas, e só podem ser usadas observando-se as regras padrão de escopo. Não podem haver variáveis com o mesmo nome no mesmo escopo, mas em escopos diferentes (e.g., sub-blocos) são permitidas.
+Qualquer comando que relacionar duas ou mais entidades (como variáveis e constantes) deverá verificar a compatibilidade de seus tipos.\
+O tipo char (constantes char) é compatível apenas com ele mesmo. Seu compilador deve aceitar expressões aritméticas e relacionais com variáveis e literais do tipo char. Ou seja, qualquer operação entre operandos char, resulta no tipo char.\
+Os tipos numéricos float e int são compatíveis, porém não se pode atribuir um float a um int. Além disso, dividindo-se dois inteiros (variáveis ou constantes) o tipo resultante é float\
+Variáveis devem ter sido declaradas antes de ser usadas, e só podem ser usadas observando-se as regras padrão de escopo. Não podem haver variáveis com o mesmo nome no mesmo escopo, mas em escopos diferentes (e.g., sub-blocos) são permitidas.\
 A tabela de símbolos deve ser utilizada para pesquisa da existência da variável e seu tipo, e deve dar suporte ao mecanismo de escopo explicado no projeto do parser.
 
 ## **Gerador de Código Intermediário**
 
 **1. Introdução**
 
-Seu compilador deve gerar código de 3 endereços correspondente ao programa fonte.
-Observação 1: o arquivo a ser compilado será passado ao seu compilador via argumento da linha de comando
-Observação 2: Imprimir apenas mensagens de erro.
+Seu compilador deve gerar código de 3 endereços correspondente ao programa fonte.\
+Observação 1: o arquivo a ser compilado será passado ao seu compilador via argumento da linha de comando\
+Observação 2: Imprimir apenas mensagens de erro.\
 Observação 3: A mensagem deve ser clara e específica de erro, sempre que for o caso, e em qualquer fase do compilador. Formato: "ERRO na linha n, coluna m, ultimo token lido t: mensagem específica do erro"
 
 **2. Regras**
 
-O código de 3 endereços deve ser semelhante ao visto nos slides. Apenas 1 instrução por linha. Apenas uma operação por instrução (conversão de tipo é uma operação).
-O seu compilador deve escrever o código gerado na saída padrão.
-Deve-se fazer uso de variáveis temporárias e labels gerados automaticamente para os goto's. Todos os comandos iterativos no programa fonte, deverão ser traduzidos para um bloco de comandos com goto's e if's. Utilize uma convenção para a semântica do if, de modo a não ficar ambígua quanto ao teste de condições.
+O código de 3 endereços deve ser semelhante ao visto nos slides. Apenas 1 instrução por linha. Apenas uma operação por instrução (conversão de tipo é uma operação).\
+O seu compilador deve escrever o código gerado na saída padrão.\
+Deve-se fazer uso de variáveis temporárias e labels gerados automaticamente para os goto's. Todos os comandos iterativos no programa fonte, deverão ser traduzidos para um bloco de comandos com goto's e if's. Utilize uma convenção para a semântica do if, de modo a não ficar ambígua quanto ao teste de condições.\
 Deve-se fazer conversão de tipos quando houver presença de entidades de tipos diferentes, porém compatíveis, no mesmo comando do programa fonte. Nenhuma instrução do código de 3 endereços pode fazer operações com tipos diferentes.
 
