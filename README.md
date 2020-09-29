@@ -19,7 +19,7 @@ especial ::= ")"  |  "("  |  "{"  |  "}"  |  ","  |  ";"\
 palreservada ::= main  |  if  |  else  |  while  |  do  |  for  |  int  |  float  |  char\
 inteiro ::= dígito+\
 float ::= dígito*.dígito+\
-char ::= 'letra'  |  'dígito'         // Uma constante do tipo char (entre aspas simples)\
+char ::= 'letra'  |  'dígito'         // Uma constante do tipo char (entre aspas simples)
 
 Aspectos Gerais da Linguagem
 
