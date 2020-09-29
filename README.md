@@ -4,8 +4,8 @@ Compilador para pseudo linguagem C. Feita para a cadeira de Compiladores de Ciê
 ## **Scanner:**
 Escrever, em C/C++ ou Java, a função SCAN para a linguagem abaixo:
 
-Observação 1: o arquivo a ser compilado será passado ao seu compilador via argumento da linha de comando
-Observação 2: Imprimir apenas mensagens de erro.
+Observação 1: o arquivo a ser compilado será passado ao seu compilador via argumento da linha de comando\
+Observação 2: Imprimir apenas mensagens de erro.\
 Observação 3: A mensagem deve ser clara e específica de erro, sempre que for o caso, e em qualquer fase do compilador. Formato: "ERRO na linha n, coluna m, ultimo token lido t: mensagem específica do erro"
 
 **Símbolos**
@@ -71,11 +71,11 @@ OBS: não são regras gerais para todos os compiladores!
 Implemente um parser descendente preditivo recursivo (com procedimentos recursivos), para a linguagem fonte descrita abaixo.
 
 
-Observação 1: o arquivo a ser compilado será passado ao seu compilador via argumento da linha de comando
-Observação 2: Imprimir apenas mensagens de erro.
-Observação 3: A mensagem deve ser clara e específica de erro, sempre que for o caso, e em qualquer fase do compilador.
-Formato: "ERRO na linha n , coluna m : mensagem específica do erro"
-Opcionalmente, pode-se imprimir o ultimo token lido (se estiver disponivel)
+Observação 1: o arquivo a ser compilado será passado ao seu compilador via argumento da linha de comando\
+Observação 2: Imprimir apenas mensagens de erro.\
+Observação 3: A mensagem deve ser clara e específica de erro, sempre que for o caso, e em qualquer fase do compilador.\
+Formato: "ERRO na linha n , coluna m : mensagem específica do erro"\
+Opcionalmente, pode-se imprimir o ultimo token lido (se estiver disponivel)\
 Observação 4: Após o fechamento do bloco do programa (main) não pode haver mais tokens, ou seja, o proximo retorno do scanner deve ser fim_de_arquivo.
 
 
