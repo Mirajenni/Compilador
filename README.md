@@ -24,25 +24,17 @@ char ::= 'letra'  |  'dígito'         // Uma constante do tipo char (entre aspa
 Aspectos Gerais da Linguagem
 
     Linguagem de formato livre.
-
     Linguagem é case sensitive, ou seja “WHILE” != “while”
-
     As palavras reservadas são delimitadas, no programa fonte, por brancos, operadores aritméticos ou símbolos especiais;
-
     Os comentários são delimitados por
-
         “//” - indicando comentário até o final da linha
-
         "/*" e "*/"
 
 Atribuições do Scanner
 
     Retornar dois resultados: classificação e lexema
-
     No caso de o token ser um identificador ou uma constante devem ser retornados classificação e lexema
-
     Se for uma palavra reservada, operador, caracter especial ou delimitador: classificação apenas
-
     Emitir mensagem clara e específica de erro, sempre que for o caso, e em qualquer fase do compilador. Formato: "ERRO na linha n, coluna m, ultimo token lido t: mensagem"
 
         Considere o TAB como equivalente a 4 colunas
@@ -145,21 +137,15 @@ Complemente seu parser com um analisador semântico. Como a linguagem é simples
 Sugere-se que o sintático não seja um código à parte, mas que esteja embutido no parser.
 
 Observação 1: o arquivo a ser compilado será passado ao seu compilador via argumento da linha de comando
-
 Observação 2: Imprimir apenas mensagens de erro.
-
 Observação 3: A mensagem deve ser clara e específica de erro, sempre que for o caso, e em qualquer fase do compilador. Formato: "ERRO na linha n, coluna m, ultimo token lido t: mensagem específica do erro"
 
 2. Regras
 
 Qualquer comando que relacionar duas ou mais entidades (como variáveis e constantes) deverá verificar a compatibilidade de seus tipos.
-
 O tipo char (constantes char) é compatível apenas com ele mesmo. Seu compilador deve aceitar expressões aritméticas e relacionais com variáveis e literais do tipo char. Ou seja, qualquer operação entre operandos char, resulta no tipo char.
-
 Os tipos numéricos float e int são compatíveis, porém não se pode atribuir um float a um int. Além disso, dividindo-se dois inteiros (variáveis ou constantes) o tipo resultante é float
-
 Variáveis devem ter sido declaradas antes de ser usadas, e só podem ser usadas observando-se as regras padrão de escopo. Não podem haver variáveis com o mesmo nome no mesmo escopo, mas em escopos diferentes (e.g., sub-blocos) são permitidas.
-
 A tabela de símbolos deve ser utilizada para pesquisa da existência da variável e seu tipo, e deve dar suporte ao mecanismo de escopo explicado no projeto do parser.
 
 ## **Gerador de Código Intermediário**
