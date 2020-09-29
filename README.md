@@ -79,10 +79,10 @@ Opcionalmente, pode-se imprimir o ultimo token lido (se estiver disponivel)
 Observação 4: Após o fechamento do bloco do programa (main) não pode haver mais tokens, ou seja, o proximo retorno do scanner deve ser fim_de_arquivo.
 
 
-1. Introdução
+**1. Introdução**
 A linguagem tem uma estrutura de blocos tipo C. Sera descrita como uma GLC e com o auxílio da notação EBNF e expressões regulares.
 
-2. Declaracões
+**2. Declaracões**
 Não teremos declaracões de procedimentos nem funções, apenas de variáveis. As declarações devem ser agrupadas no início do bloco, e devem aparecer numa sequência bem definida de modo a facilitar a compilação.
 
 As variáveis podem ser do tipo int, float ou char, e as declarações devem ter o seguinte formato:
@@ -90,7 +90,7 @@ As variáveis podem ser do tipo int, float ou char, e as declarações devem ter
 <decl_var> ::= <tipo> <id> {,<id>}* ";"
 <tipo> ::= int | float | char
 
-3. Expressões
+**3. Expressões**
 Em geral, uma expressão é uma arvore de valores. Em sua forma mais simples, ela é um único valor de um tipo primitivo.
 As produções para expressões obedecem à seguinte ordem de precedência:
 
@@ -102,12 +102,12 @@ O aluno deve modificar as produções de modo a eliminar a recursão à esquerda
 
 OBS: Expressões apenas com os operadores *, /, +, - são expressões aritméticas. Expressões com os operadores de comparação (==, !>, <, ...) são expressões relacionais. Não podemos ter mais de um operador relacional em um expressão. Podemos ter expressões aritméticas de qualquer lado de um operador relacional. Mas, não podemos ter expressões relacionais em comandos de atribuição.
 
-4. Programa e Comandos
+**4. Programa e Comandos**
 
 Um programa é um bloco (como em C). Podemos ter blocos dentro de blocos. Dentro de um bloco as declaracões devem preceder os comandos.
 O significado de if, if-else, while e do-while é como na linguagem C padrão.
 
-5. Sintaxe
+**5. Sintaxe**
 
 <programa>       ::=   int main"("")" <bloco>
 <bloco>          ::=   “{“ {<decl_var>}* {<comando>}* “}”
@@ -122,7 +122,7 @@ O significado de if, if-else, while e do-while é como na linguagem C padrão.
 
 Nota: os símbolos abre e fecha chaves, quando entre aspas, são terminais
 
-6. Tabela de Símbolos
+**6. Tabela de Símbolos**
 
 Para as variáveis, sugere-se que a tabela de símbolos seja uma lista encadeada onde os nós serão registros com os atributos das variáveis: lexema e tipo. O aluno pode modificar a tabela se encontrar utilidade para outro tipo de atributo ou se achar necessário incluir constantes com seus tipos e valores.
 
@@ -130,7 +130,7 @@ Como em toda lista encadeada, precisamos de um nó que aponta para a "cabeça" d
 
 ## **Semântico**
 
-1. Introdução
+**1. Introdução**
 
 Complemente seu parser com um analisador semântico. Como a linguagem é simples, haverá basicamente checagem de tipos.
 
@@ -140,7 +140,7 @@ Observação 1: o arquivo a ser compilado será passado ao seu compilador via ar
 Observação 2: Imprimir apenas mensagens de erro.
 Observação 3: A mensagem deve ser clara e específica de erro, sempre que for o caso, e em qualquer fase do compilador. Formato: "ERRO na linha n, coluna m, ultimo token lido t: mensagem específica do erro"
 
-2. Regras
+**2. Regras**
 
 Qualquer comando que relacionar duas ou mais entidades (como variáveis e constantes) deverá verificar a compatibilidade de seus tipos.
 O tipo char (constantes char) é compatível apenas com ele mesmo. Seu compilador deve aceitar expressões aritméticas e relacionais com variáveis e literais do tipo char. Ou seja, qualquer operação entre operandos char, resulta no tipo char.
@@ -150,14 +150,14 @@ A tabela de símbolos deve ser utilizada para pesquisa da existência da variáv
 
 ## **Gerador de Código Intermediário**
 
-1. Introdução
+**1. Introdução**
 
 Seu compilador deve gerar código de 3 endereços correspondente ao programa fonte.
 Observação 1: o arquivo a ser compilado será passado ao seu compilador via argumento da linha de comando
 Observação 2: Imprimir apenas mensagens de erro.
 Observação 3: A mensagem deve ser clara e específica de erro, sempre que for o caso, e em qualquer fase do compilador. Formato: "ERRO na linha n, coluna m, ultimo token lido t: mensagem específica do erro"
 
-2. Regras
+**2. Regras**
 
 O código de 3 endereços deve ser semelhante ao visto nos slides. Apenas 1 instrução por linha. Apenas uma operação por instrução (conversão de tipo é uma operação).
 O seu compilador deve escrever o código gerado na saída padrão.
