@@ -73,7 +73,7 @@ Erros do Scanner neste projeto:
 
 OBS: não são regras gerais para todos os compiladores!
 
-##**Parser**
+## **Parser**
 
 
 Implemente um parser descendente preditivo recursivo (com procedimentos recursivos), para a linguagem fonte descrita abaixo.
