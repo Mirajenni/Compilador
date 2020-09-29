@@ -120,7 +120,7 @@ O significado de if, if-else, while e do-while é como na linguagem C padrão.
 <termo>          ::=   <termo> "*" <fator> | <termo> “/” <fator> | <fator>\
 <fator>          ::=   “(“ <expr_arit> “)” | <id> | <float> | <inteiro> | <char>
 
-Nota: os símbolos abre e fecha chaves, quando entre aspas, são terminais\
+Nota: os símbolos abre e fecha chaves, quando entre aspas, são terminais
 
 **6. Tabela de Símbolos**
 
