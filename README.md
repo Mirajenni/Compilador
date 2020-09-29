@@ -94,11 +94,11 @@ As variáveis podem ser do tipo int, float ou char, e as declarações devem ter
 Em geral, uma expressão é uma arvore de valores. Em sua forma mais simples, ela é um único valor de um tipo primitivo.
 As produções para expressões obedecem à seguinte ordem de precedência:
 
- 1. *, /
- 2. +, -
- 3. ==, !=, <, >, <=, >=
+ 1. *, /\
+ 2. +, -\
+ 3. ==, !=, <, >, <=, >=\
 
-O aluno deve modificar as produções de modo a eliminar a recursão à esquerda
+O aluno deve modificar as produções de modo a eliminar a recursão à esquerda\
 
 OBS: Expressões apenas com os operadores *, /, +, - são expressões aritméticas. Expressões com os operadores de comparação (==, !>, <, ...) são expressões relacionais. Não podemos ter mais de um operador relacional em um expressão. Podemos ter expressões aritméticas de qualquer lado de um operador relacional. Mas, não podemos ter expressões relacionais em comandos de atribuição.
 
@@ -126,7 +126,7 @@ Nota: os símbolos abre e fecha chaves, quando entre aspas, são terminais\
 
 Para as variáveis, sugere-se que a tabela de símbolos seja uma lista encadeada onde os nós serão registros com os atributos das variáveis: lexema e tipo. O aluno pode modificar a tabela se encontrar utilidade para outro tipo de atributo ou se achar necessário incluir constantes com seus tipos e valores.\
 
-Como em toda lista encadeada, precisamos de um nó que aponta para a "cabeça" da lista. Chamemos este nó de "tabela". Na ativação de um bloco, guarde o conteúdo de "tabela" e adicione as novas variáveis no inicio da tabela de símbolos. Na desativação, restaure o valor de "tabela", eliminando assim todas as variáveis declaradas nesse bloco. Lembre de desalocar todos os nós com as variáveis do bloco sendo desativado. A busca a partir de "tabela" sempre encontrará o identificador mais recentemente declarado, por isso as variáveis devem ser incluídas no início da tabela de símbolos.\
+Como em toda lista encadeada, precisamos de um nó que aponta para a "cabeça" da lista. Chamemos este nó de "tabela". Na ativação de um bloco, guarde o conteúdo de "tabela" e adicione as novas variáveis no inicio da tabela de símbolos. Na desativação, restaure o valor de "tabela", eliminando assim todas as variáveis declaradas nesse bloco. Lembre de desalocar todos os nós com as variáveis do bloco sendo desativado. A busca a partir de "tabela" sempre encontrará o identificador mais recentemente declarado, por isso as variáveis devem ser incluídas no início da tabela de símbolos.
 
 ## **Semântico**
 
@@ -138,7 +138,7 @@ Sugere-se que o sintático não seja um código à parte, mas que esteja embutid
 
 Observação 1: o arquivo a ser compilado será passado ao seu compilador via argumento da linha de comando\
 Observação 2: Imprimir apenas mensagens de erro.\
-Observação 3: A mensagem deve ser clara e específica de erro, sempre que for o caso, e em qualquer fase do compilador. Formato: "ERRO na linha n, coluna m, ultimo token lido t: mensagem específica do erro"\
+Observação 3: A mensagem deve ser clara e específica de erro, sempre que for o caso, e em qualquer fase do compilador. Formato: "ERRO na linha n, coluna m, ultimo token lido t: mensagem específica do erro"
 
 **2. Regras**
 
