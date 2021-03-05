@@ -1,5 +1,5 @@
 ## Compilador
-Compilador para pseudo linguagem C. Feita para a cadeira de Compiladores de Ciência da Computação na UNICAP.
+Compilador para pseudo linguagem C. Feito para a cadeira de Compiladores de Ciência da Computação na UNICAP.
 
 ## **Scanner:**
 Escrever, em C/C++ ou Java, a função SCAN para a linguagem abaixo:
